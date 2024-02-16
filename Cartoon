@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Anna Belenko's Canvas</h1>
+<h3>Cartoon Assignment</h3>
+<p>CISC 3160 Professor Goetz</p>
+
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid grey"></canvas>
+
+</body>
+</html>
