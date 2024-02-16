@@ -19,20 +19,24 @@ ctx.fillStyle = '#FF009D';
 // Add the caption text
 ctx.fillText('Hey Peppa Pig', 100, 30);
 
-// Body
+// Body + Dress
 ctx.beginPath();
 ctx.fillStyle = '#ffcccc'; // Light pink
-ctx.ellipse(150, 180, 30, 60, Math.PI / 4, 0, 2 * Math.PI);
+ctx.ellipse(150, 180, 30, 60, Math.PI / 1, 0, 2 * Math.PI);
 ctx.fill();
+
 
 // Head
 ctx.beginPath();
 ctx.ellipse(180, 100, 35, 35, Math.PI / 4, 0, 2 * Math.PI); 
+ctx.ellipse(200, 97, 25, 35, Math.PI / 4, 0, 2 * Math.PI); 
+
 ctx.fill();
 
 // Nose
 ctx.beginPath();
-ctx.ellipse(195, 110, 15, 8, Math.PI / 4, 0, 2 * Math.PI);
+ctx.fillStyle = '#F49AD1'; // Light pink
+ctx.ellipse(220, 85, 10, 20, Math.PI / -8, 0, 2 * Math.PI); 
 ctx.fill();
 
 // Eye
