@@ -4,11 +4,17 @@ const ctx = canvas.getContext("2d");
 ctx.fillStyle = 'green';
 
 var rectWidth = 300;
-var rectHeight = 50;
+var rectHeight = 100;
 var xPos = (canvas.width - rectWidth) / 2; 
 var yPos = canvas.height - rectHeight; 
 
-ctx.fillRect(xPos,yPos,rectWidth,rectHeight);
+ctx.fillRect(xPos,yPos,rectWidth,rectHeight); // add the grass
+
+// Use a for loop to draw each blade of grass
+for(var i = 0; i < canvas.width; i += 5) {
+    // Draw a blade of grass as a rectangle
+    ctx.fillRect(i, canvas.height - 110, 2, 20); 
+}
 
 // Set the font for caption
 ctx.font = '14px Arial';
@@ -28,32 +34,32 @@ ctx.fill();
 
 // Head
 ctx.beginPath();
-ctx.ellipse(180, 100, 35, 35, Math.PI / 4, 0, 2 * Math.PI); 
-ctx.ellipse(200, 97, 25, 35, Math.PI / 4, 0, 2 * Math.PI); 
+ctx.ellipse(170, 100, 35, 35, Math.PI / 4, 0, 2 * Math.PI); 
+ctx.ellipse(190, 97, 25, 35, Math.PI / 4, 0, 2 * Math.PI); 
 
 ctx.fill();
 
 // Nose
 ctx.beginPath();
 ctx.fillStyle = '#F49AD1'; // Light pink
-ctx.ellipse(220, 85, 10, 20, Math.PI / -8, 0, 2 * Math.PI); 
+ctx.ellipse(210, 85, 10, 20, Math.PI / -8, 0, 2 * Math.PI); 
 ctx.fill();
 
 // Eye
 ctx.beginPath();
 ctx.fillStyle = 'white'; // Eye color
-ctx.arc(188, 90, 7, 0, Math.PI * 2, true); 
+ctx.arc(178, 90, 7, 0, Math.PI * 2, true); 
 ctx.fill();
 
 ctx.beginPath();
 ctx.fillStyle = 'black'; // Pupil color
-ctx.arc(190, 88, 3, 0, Math.PI * 2, true); 
+ctx.arc(180, 88, 3, 0, Math.PI * 2, true); 
 ctx.fill();
 
 // Smile
 ctx.beginPath();
 ctx.strokeStyle = 'black'; // Smile color
-ctx.arc(195, 120, 7, 0, Math.PI, false); 
+ctx.arc(185, 120, 7, 0, Math.PI, false); 
 ctx.stroke();
 
 // Legs
